@@ -148,10 +148,10 @@ public class WebSocketHandshake {
 			throw new IOException("WebSocket Response header: Incorrect upgrade.");
 		}
 
-		String secWebsocketProtocolHeader = (String) headerMap.get(HTTP_HEADER_SEC_WEBSOCKET_PROTOCOL);
-		if (secWebsocketProtocolHeader == null) {
-			throw new IOException("WebSocket Response header: empty sec-websocket-protocol");
-		}
+// 		String secWebsocketProtocolHeader = (String) headerMap.get(HTTP_HEADER_SEC_WEBSOCKET_PROTOCOL);
+// 		if (secWebsocketProtocolHeader == null) {
+// 			throw new IOException("WebSocket Response header: empty sec-websocket-protocol");
+// 		}
 
 		if(!headerMap.containsKey(HTTP_HEADER_SEC_WEBSOCKET_ACCEPT)){
 			throw new IOException("WebSocket Response header: Missing Sec-WebSocket-Accept");
